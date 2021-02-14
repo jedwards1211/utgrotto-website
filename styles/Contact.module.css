@@ -1,0 +1,61 @@
+.contactsGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -0.5em;
+}
+
+.contactCard {
+  margin: 0.5em;
+  flex: 1 1 380px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contactImage {
+  flex: 0 0 150px;
+}
+
+.contactDetails {
+  margin-left: 1em;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactRoleAndName {
+  font-size: 1.2em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+
+.contactName {
+  white-space: nowrap;
+}
+
+.contactRole {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.contactEmails {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+@media (max-width: 420px) {
+  .contactCard {
+    flex-direction: column;
+  }
+
+  .contactDetails {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+}
