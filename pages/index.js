@@ -84,7 +84,7 @@ export default function Home() {
 
         <iframe
           id="calendar"
-          src="http://www.google.com/calendar/embed?src=k6qu7co0cu3ismbpckbclo3h1k%40group.calendar.google.com&ctz=America/Chicago&showTitle=0&showCalendars=0"
+          src="https://www.google.com/calendar/embed?src=k6qu7co0cu3ismbpckbclo3h1k%40group.calendar.google.com&ctz=America/Chicago&showTitle=0&showCalendars=0"
           style={{ border: 0 }}
           width="100%"
           height="400"
