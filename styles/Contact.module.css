@@ -8,13 +8,13 @@
 
 .contactCard {
   margin: 0.5em;
-  flex: 1 1 380px;
+  flex: 1 1 600px;
   display: flex;
   flex-direction: row;
 }
 
 .contactImage {
-  flex: 0 0 150px;
+  flex: 0 0 200px;
 }
 
 .contactDetails {
@@ -42,16 +42,15 @@
 }
 
 .contactEmails {
-  flex: 1 1 auto;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-content: flex-end;
 }
 
 @media (max-width: 420px) {
   .contactCard {
     flex-direction: column;
+    margin-bottom: 2rem;
   }
 
   .contactDetails {
