@@ -69,16 +69,7 @@ export default function Home() {
                   )}`
                 )}">Email us</a>`,
               }}
-            />
-            <a
-              href={`mailto:president@utgrotto.org?subject=${encodeURIComponent(
-                'Meeting Info'
-              )}&body=${encodeURIComponent(
-                'Please notify me about upcoming meetings.'
-              )}`}
-            >
-              Email us
-            </a>{' '}
+            />{' '}
             to be notified about upcoming meetings.
           </p>
 
