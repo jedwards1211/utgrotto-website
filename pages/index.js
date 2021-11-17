@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Contact from '../src/Contact'
 import styles from '../styles/Home.module.css'
+import obfuscateEmail from '../src/obfuscateEmail'
 
 function Section({ title, children }) {
   return (
@@ -49,13 +50,36 @@ export default function Home() {
 
         <Section title="Meetings">
           <p className={styles.p}>
-            Before the pandemic, we were meeting biweekly in person, but we're
-            still meeting virtually! Meetings are currently held online via
-            Zoom. See{' '}
+            Our meetings allow for hybrid attendance in person or via Zoom.
+            Events, trips, and meeting links are posted on{' '}
             <a href="https://www.facebook.com/groups/utgrotto/">
               our facebook page
+            </a>
+            .
+          </p>
+
+          <p className={styles.p}>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: `<a href="${obfuscateEmail(
+                  `mailto:president@utgrotto.org?subject=${encodeURIComponent(
+                    'Meeting Info'
+                  )}&body=${encodeURIComponent(
+                    'Please notify me about upcoming meetings.'
+                  )}`
+                )}">Email us</a>`,
+              }}
+            />
+            <a
+              href={`mailto:president@utgrotto.org?subject=${encodeURIComponent(
+                'Meeting Info'
+              )}&body=${encodeURIComponent(
+                'Please notify me about upcoming meetings.'
+              )}`}
+            >
+              Email us
             </a>{' '}
-            for Zoom links.
+            to be notified about upcoming meetings.
           </p>
 
           <p className={styles.p}>
@@ -80,18 +104,6 @@ export default function Home() {
               Update your contact information
             </a>
           </p>
-        </Section>
-
-        <Section title="Calendar">
-          <iframe
-            id="calendar"
-            src="https://www.google.com/calendar/embed?src=k6qu7co0cu3ismbpckbclo3h1k%40group.calendar.google.com&ctz=America/Chicago&showTitle=0&showCalendars=0"
-            style={{ border: 0 }}
-            width="100%"
-            height="400"
-            frameBorder="0"
-            scrolling="no"
-          />
         </Section>
 
         <Section title="Contact">
